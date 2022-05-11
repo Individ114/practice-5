@@ -1,0 +1,868 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  line-height: 1;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: local("font/Larsseit Regular"), local("font/Larsseit-Regular"),
+    url("font/Larsseit.woff2") format("woff2"),
+    url("font/Larsseit.woff") format("woff"),
+    url("font/Larsseit.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: local("font/Larsseit Bold"), local("font/Larsseit-Bold"),
+    url("font/Larsseit-Bold.woff2") format("woff2"),
+    url("font/Larsseit-Bold.woff") format("woff"),
+    url("font/Larsseit-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: local("font/Larsseit Light"), local("font/Larsseit-Light"),
+    url("font/Larsseit-Light.woff2") format("woff2"),
+    url("font/Larsseit-Light.woff") format("woff"),
+    url("font/Larsseit-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: local("font/Larsseit Medium"), local("font/Larsseit-Medium"),
+    url("font/Larsseit-Medium.woff2") format("woff2"),
+    url("font/Larsseit-Medium.woff") format("woff"),
+    url("font/Larsseit-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Larsseit";
+  src: local("font/Larsseit Thin"), local("font/Larsseit-Thin"),
+    url("font/Larsseit-Thin.woff2") format("woff2"),
+    url("font/Larsseit-Thin.woff") format("woff"),
+    url("font/Larsseit-Thin.ttf") format("truetype");
+  font-weight: 100;
+  font-style: normal;
+}
+.wrapper {
+  background: #000000;
+  width: 100%;
+  min-height: 100vh;
+}
+.container {
+  width: 1440px;
+  margin: 0 auto;
+  background-color: white;
+  flex: 1 1 auto;
+}
+
+.thrivetalk-parent {
+  display: flex;
+}
+.box-1 {
+  width: 1117px;
+  background: #f4f9e2;
+  padding: 20px 277px 75px 179px;
+}
+
+.thrivetalk-top-menu {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.thrivetalk-top-menu-tittle {
+  display: flex;
+  align-items: center;
+}
+.thrivetalk-top-menu-tittle h2 {
+  font-family: "Larsseit";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: -0.035em;
+  color: #62d0df;
+}
+.thrivetalk-top-menu-links {
+  display: flex;
+  align-items: center;
+}
+.thrivetalk-top-menu-links-list {
+  width: 233px;
+  display: flex;
+  justify-content: space-between;
+}
+.item {
+  list-style: none;
+}
+.thrivetalk-link {
+  font-weight: 400;
+  font-family: "Larsseit";
+  font-size: 14px;
+  line-height: 16px;
+  color: #22356f;
+  position: relative;
+}
+.thrivetalk-link::after {
+  content: "";
+  width: 136%;
+  height: 1px;
+  background-color: #22356f;
+  display: block;
+  display: none;
+  position: absolute;
+  left: -18%;
+  bottom: -12px;
+}
+.thrivetalk-link:hover::after {
+  display: block;
+}
+.thrivetalk-link.active {
+  font-family: "Larsseit";
+  font-weight: 500;
+  position: relative;
+}
+.thrivetalk-link.active::after {
+  content: "";
+  width: 136%;
+  height: 1px;
+  background-color: #22356f;
+  display: block;
+  position: absolute;
+  left: -18%;
+  bottom: -12px;
+}
+.thrivetalk-content {
+}
+.thrivetalk-content-tittle {
+  width: 484px;
+  height: 62px;
+  margin-top: 174px;
+}
+.thrivetalk-content-tittle h2 {
+  font-family: "Larsseit";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: -0.035em;
+  color: #62d0df;
+}
+.thrivetalk-content-heading {
+  width: 484px;
+  height: 167px;
+}
+.thrivetalk-content-heading h2 {
+  font-family: "Larsseit";
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.035em;
+  color: #22356f;
+}
+.thrivetalk-content-text {
+  width: 469px;
+  height: 161px;
+  margin: 10px 0 71px 0;
+}
+.thrivetalk-content-text p {
+  font-family: "Larsseit";
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 46px;
+  color: #22356f;
+}
+.thrivetalk-content-buttons {
+  display: flex;
+}
+.thrivetalk-content-buttons-one {
+  background: #f9b640;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  margin-right: 38px;
+}
+.thrivetalk-content-buttons-one a {
+  display: block;
+  font-family: "Larsseit";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 50px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+.thrivetalk-content-buttons-two {
+  width: 150px;
+  height: 50px;
+  text-align: center;
+}
+.thrivetalk-content-buttons-two a {
+  display: block;
+  font-family: "Larsseit";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 50px;
+  letter-spacing: 0.1em;
+  color: #f9b640;
+}
+.thrivetalk-content-buttons-two a:hover {
+  color: white;
+  background: #f9b640;
+}
+.box-2 {
+  width: 323px;
+  background-color: #ffffff;
+  padding: 20px 0 0 0;
+  background: url(img/Screenshot_1.jpg) -800px 0 / 1400px auto no-repeat;
+}
+.thrivetalk-top-menu-button {
+  width: 100%;
+}
+.thrivetalk-top-menu-button-popup {
+  background: #62d0df;
+  border-radius: 50px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  margin: 7px 0 0 43px;
+  transition: background 0.5s;
+}
+.thrivetalk-top-menu-button-popup:hover {
+  background: rgb(92, 166, 209);
+  border-radius: 50px;
+  width: 150px;
+  height: 50px;
+  text-align: center;
+  margin: 7px 0 0 43px;
+}
+.link-popup {
+  display: block;
+  font-family: "Larsseit";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 50px;
+  color: #ffffff;
+}
+
+.why-parent {
+  width: 100%;
+  background-color: #62d0df;
+  display: flex;
+  min-height: 604px;
+}
+.why-content {
+  display: flex;
+  flex-direction: column;
+}
+.why-content-tittle {
+  margin: 161px 0 0 178px;
+}
+.why-content-tittle h2 {
+  font-family: "Larsseit";
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 27px;
+  letter-spacing: -0.006em;
+
+  color: #ffffff;
+}
+.why-content-text {
+  margin: 84px 181px 0px 178px;
+}
+.why-content-text-bold {
+  font-family: "Larsseit";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 40px;
+  color: #ffffff;
+  display: inline;
+  letter-spacing: 0.008em;
+}
+.why-content-text-norm {
+  display: inline;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 32px;
+  font-family: "Larsseit";
+  color: #ffffff;
+  letter-spacing: 0.008em;
+}
+
+.why-img {
+  min-width: 525px;
+  height: 604px;
+}
+.why-img img {
+  width: 100%;
+}
+
+.about-parent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+  width: 100%;
+}
+.about-parent-flex {
+}
+
+.about-flex-text {
+  position: relative;
+  margin-top: 150px;
+  margin-bottom: 76px;
+  width: 592px;
+  height: 210px;
+}
+.about-flex-textp {
+  font-family: "Larsseit";
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 37px;
+  letter-spacing: 0.005em;
+  color: #22356f;
+}
+.about-flex-tittle {
+  position: absolute;
+  left: -320px;
+  top: 5px;
+}
+.about-flex-tittlep {
+  font-family: "Larsseit";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.06em;
+
+  color: #22356f;
+}
+.about-parent-downtxt {
+  margin-bottom: 24px;
+}
+.about-parent-downtxt p {
+  font-family: "Larsseit";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  color: rgba(34, 53, 111, 0.5);
+}
+
+.four-parent {
+  background-color: white;
+  width: 100%;
+}
+.four-parent-box {
+  margin-bottom: 120px;
+}
+.four-parent-box-flex {
+  display: flex;
+  flex-direction: row;
+}
+.four-parent-box-flex-item {
+  height: 360px;
+  width: 360px;
+}
+.block1 {
+  background-color: #ffe2de;
+}
+.block2 {
+  background-color: #c4e769;
+}
+.block3 {
+  background-color: #62d0df;
+}
+.block4 {
+  background-color: #0052c1;
+}
+.four-parent-box-flex-item-subblock {
+  display: flex;
+  width: 255px;
+  margin: 72px auto 0;
+  border-top: 1px solid white;
+  padding: 23px 0 0 0px;
+}
+.four-parent-box-flex-item-subblock-marker {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #e9b730;
+  margin: 8px 15px 0 0;
+}
+.four-parent-box-flex-item-subblock-markerbox {
+  display: flex;
+  flex-direction: column;
+}
+.four-parent-box-flex-item-subblock-markerempty {
+  background-color: #000000;
+}
+.four-parent-box-flex-item-subblock-heading {
+}
+.four-parent-box-flex-item-subblock-heading p {
+  font-family: "Larsseit";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 34px;
+  color: #ffffff;
+}
+.six-parent {
+  width: 100%;
+  background-color: white;
+}
+.six-parent-box {
+}
+.six-parent-box-flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+.six-parent-box-flex-item {
+  width: 480px;
+  height: 480px;
+}
+.block1-2 {
+  background-color: #22356f;
+}
+.block2-2 {
+  background: #0052c1;
+}
+.block3-2 {
+  background: url(img/joanna-kosinska-340748.jpg);
+  background-size: 100% 100%;
+}
+.block4-2 {
+  background: #62d0df;
+}
+.block5-2 {
+  background: #dee1ff;
+}
+.block6-2 {
+  background: #8f00ff;
+}
+
+.six-parent-box-flex-item-subblock {
+  display: flex;
+  width: 340px;
+  margin: 90px auto 0;
+  border-top: 1px solid white;
+  padding: 36px 0 0 0px;
+}
+.six-parent-box-flex-item-subblock-marker {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background-color: #e9b730;
+  margin: 14px 20px 0 5px;
+}
+.six-parent-box-flex-item-subblock-heading {
+  width: 160px;
+}
+.six-parent-box-flex-item-subblock-heading p {
+  font-family: "Larsseit";
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 38px;
+  color: #ffffff;
+}
+
+.copy-parent {
+  width: 100%;
+  background-color: white;
+}
+.copy-parent-box {
+  margin-bottom: 40px;
+}
+.copy-parent-box-flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+.copy-parent-box-flex-block {
+  width: 480px;
+  height: 240px;
+  background-color: white;
+}
+.copy-parent-box-flex-block-tittle {
+  margin: 55px 141px 28px 105px;
+}
+.copy-parent-box-flex-block-tittle h2 {
+  font-family: "Larsseit";
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 33px;
+  color: #22356f;
+}
+.copy-parent-box-flex-block-text {
+  margin: 0px 77px 37px 105px;
+}
+.copy-parent-box-flex-block-text p {
+  font-family: "Larsseit";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 25px;
+  color: rgba(34, 53, 111, 0.5);
+}
+.mdd-parent {
+  width: 100%;
+  background-color: white;
+}
+.mdd-parent-box {
+}
+.mdd-parent-box-flex {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.mdd-parent-box-flex-block {
+  height: 800px;
+}
+.mdd-parent-box-flex-block.item1 {
+}
+.mdd-parent-box-flex-block img {
+  width: 100%;
+}
+.mdd-parent-box-flex-block .item2 {
+  display: flex;
+  flex-direction: column;
+}
+.mdd-parent-box-flex-block-item2-tiitle {
+  margin: 103px 0 0 106px;
+}
+.mdd-parent-box-flex-block-item2-tiitle h3 {
+  font-family: "Larsseit";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 12px;
+  letter-spacing: 0.05em;
+  color: #22356f;
+}
+.mdd-parent-box-flex-block-item2-text {
+  margin: 225px 0 0 106px;
+  width: 690px;
+}
+.mdd-parent-box-flex-block-item2-text p {
+  font-family: "Larsseit";
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 60px;
+  color: #22356f;
+}
+.mdd-parent-box-flex-block-item2-text p span {
+  color: #62d0df;
+}
+.mdd-parent-box-flex-block-item2-link {
+  margin: 152px 0 0 106px;
+}
+.mdd-parent-box-flex-block-item2-link a {
+  font-family: "Larsseit";
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 23px;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.1em;
+  color: #fab63e;
+}
+.mddrevers-parent {
+  width: 100%;
+  background-color: #22356f;
+}
+.mddrevers-parent-box {
+  height: 800px;
+  overflow: hidden;
+}
+.mddrevers-parent-box-flex {
+  display: flex;
+  flex-flow: row-reverse nowrap;
+}
+.mddrevers-parent-box-flex-block {
+}
+.mddrevers-parent-box-flex-block.item1 {
+  min-width: 480px;
+  height: 800px;
+}
+.mddrevers-parent-box-flex-block.item1 img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.mddrevers-parent-box-flex-block.item2 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.mddrevers-parent-box-flex-block-item2-tiitle {
+  margin: 103px 0 220px 180px;
+}
+.mddrevers-parent-box-flex-block-item2-tiitle h3 {
+  font-family: "Larsseit";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 12px;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+.mddrevers-parent-box-flex-block-item2-tiitleheading {
+  margin: 0 0 50px 180px;
+}
+.mddrevers-parent-box-flex-block-item2-tiitleheading h2 {
+  font-family: "Larsseit";
+  font-weight: 600;
+  font-size: 64px;
+  line-height: 94px;
+  letter-spacing: -0.01em;
+  color: #ffffff;
+}
+.mddrevers-parent-box-flex-block-item2-text {
+  width: 579px;
+  margin: 0 0 0 180px;
+}
+.mddrevers-parent-box-flex-block-item2-text p {
+  font-family: "Larsseit";
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 58px;
+  letter-spacing: -0.005em;
+  color: #ffffff;
+}
+.mddrevers-parent-box-flex-block-item2-link {
+  margin: 65px 0 60px 180px;
+}
+.mddrevers-parent-box-flex-block-item2-link a {
+  font-family: "Larsseit";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 23px;
+  letter-spacing: 0.1em;
+  color: #62d0df;
+}
+.info-parent {
+  width: 100%;
+  background-color: white;
+}
+.info-parent-box {
+}
+.info-parent-box-flex {
+  display: flex;
+  flex-direction: row;
+}
+.info-parent-box-flex-block1 {
+}
+.info-parent-box-flex-block1-img {
+  width: 570px;
+  height: 380px;
+}
+.info-parent-box-flex-block1-img img {
+  width: 100%;
+}
+.info-parent-box-flex-block2 {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.info-parent-box-flex-block2-colomn {
+  margin-top: 98px;
+
+  width: 240px;
+  height: 250px;
+}
+.info-parent-box-flex-block2-colomn.item1 {
+  margin-left: 68px;
+}
+.info-parent-box-flex-block2-colomn.item2 {
+}
+.info-parent-box-flex-block2-colomn.item3 {
+}
+.info-parent-box-flex-block2-colomn-tittle {
+  height: 48px;
+}
+.info-parent-box-flex-block2-colomn-tittle h3 {
+  font-family: "Larsseit";
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 11px;
+  letter-spacing: -0.006em;
+  color: #22356f;
+}
+.info-parent-box-flex-block2-colomn-text {
+  height: 172px;
+  padding-top: 20px;
+  border-right: 1px solid rgb(247, 247, 247);
+}
+.info-parent-box-flex-block2-colomn-text p {
+  font-family: "Larsseit";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 23px;
+  letter-spacing: -0.006em;
+  color: rgba(34, 53, 111, 0.5);
+}
+.info-parent-box-flex-block2-colomn-text p a {
+  color: #0084ff;
+}
+.footer {
+  width: 100%;
+}
+.footer-box {
+  background-color: #62d0df;
+  height: 80px;
+  width: 1440px;
+  margin: 0 auto;
+}
+.footer-box-container {
+}
+.footer-box-container-flex {
+}
+.footer-box-container-flex-block {
+  margin-left: 179px;
+}
+.footer-box-container-flex-block p {
+  font-family: "Larsseit";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 80px;
+  letter-spacing: -0.006em;
+  color: #ffffff;
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+}
+.popup:target {
+  visibility: hidden;
+}
+.popup-fon-link-clouse {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.popup-fon-popup-box-container {
+  width: 1440px;
+  height: 629px;
+  margin: auto;
+}
+.popup-fon-popup-box-container-box {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: white;
+  padding: 196px 0 51px 412px;
+}
+.popup-fon-popup-box-container-flex {
+  display: flex;
+  height: 100%;
+  flex: 0 0 auto;
+  flex-flow: column nowrap;
+  /* justify-content: center; */
+  align-items: flex-start;
+  width: 750px;
+}
+.popup-fon-popup-box-container-flex-logo {
+  position: absolute;
+  top: 39px;
+  left: 50px;
+}
+.popup-fon-popup-box-container-flex-clousepopup {
+  position: absolute;
+  top: 39px;
+  right: 50px;
+  font-family: "Larsseit";
+  opacity: 0.5;
+  transform: scale(2, 1.5);
+}
+.popup-fon-popup-box-container-flex-clousepopup p {
+  color: #1abcfe;
+}
+.popup-fon-popup-box-container-flex-logo img {
+}
+.popup-fon-popup-box-container-flex-tittle {
+  margin-bottom: 20px;
+  position: relative;
+}
+.popup-fon-popup-box-container-flex-tittle h1 {
+  font-family: "Larsseit";
+  font-weight: 700;
+  font-size: 72px;
+  line-height: 76px;
+  letter-spacing: -0.006em;
+  color: #292929;
+}
+.popup-fon-popup-box-container-flex-made {
+  position: absolute;
+  top: 12px;
+  left: -180px;
+}
+.popup-fon-popup-box-container-flex-made p {
+  font-family: "Larsseit";
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 17px;
+  letter-spacing: -0.006em;
+  color: #a259ff;
+}
+.popup-fon-popup-box-container-flex-subtittle {
+  margin-bottom: 67px;
+}
+.popup-fon-popup-box-container-flex-subtittle h2 {
+  font-family: "Larsseit";
+  font-weight: 300;
+  font-size: 32px;
+  line-height: 34px;
+  letter-spacing: -0.006em;
+  color: #4f4f4f;
+}
+.popup-fon-popup-box-container-flex-links {
+  margin-bottom: 123px;
+}
+.popup-fon-popup-box-container-flex-links a {
+  font-family: "Larsseit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 27px;
+  letter-spacing: -0.006em;
+  text-decoration-line: none;
+  color: #1abcfe;
+  margin-right: 70px;
+}
+.popup-fon-popup-box-container-flex-links a:hover {
+  text-decoration-line: underline;
+}
+.popup-fon-popup-box-container-flex-links a:last-child {
+  margin-right: 0;
+}
+.popup-fon-popup-box-container-flex-downtext {
+}
+.popup-fon-popup-box-container-flex-downtext p {
+  font-family: "Larsseit";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: -0.006em;
+  color: #696969;
+}
